@@ -1,0 +1,92 @@
+The ``1-my_list`` module
+==========================
+
+Using ``MyList``
+------------------
+
+Import the class:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Check instantiation
+--------------------
+
+    >>> my_list = MyList()
+
+Check inherits from list
+--------------------------
+
+    >>> isinstance(my_list, list)
+    True
+
+Check __str__
+---------------
+
+    >>> my_list = MyList()
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> print(my_list)
+    [4, 2]
+
+Check append()
+----------------
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> print(my_list)
+    [1, 2, 3]
+
+Check print_sorted() with sorted append
+------------------------------------------
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.print_sorted()
+    [1, 2, 3]
+
+Check print_sorted() with not sorted append
+----------------------------------------------
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+Check print_sorted() with not sorted append with negative number
+---------------------------------------------------------------------
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(-4)
+    >>> my_list.append(2)
+    >>> my_list.append(-3)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+    [-4, -3, 1, 2, 5]
+
+Check print_sorted() with empty list
+----------------------------------------
+
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+Check print_sorted() returns a new list (original order unchanged)
+-----------------------------------------------------------------------
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.print_sorted()
+    [1, 2, 4]
+    >>> print(my_list)
+    [1, 4, 2]
